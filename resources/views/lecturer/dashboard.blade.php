@@ -189,9 +189,9 @@
             </div>
 
             <!-- Right Column -->
-            <div class="space-y-6">
+            <div class="hidden lg:block space-y-6">
                 <!-- Profile -->
-                <div class="p-6 text-center ">
+                <div class="p-6 text-center">
                     <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-semibold text-xl">
                             {{ strtoupper(substr($user->name, 0, 1)) }}

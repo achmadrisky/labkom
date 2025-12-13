@@ -14,13 +14,16 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-neutral-900 text-accent-foreground min-h-screen flex flex-col items-center justify-between p-6">
+<body class="bg-white dark:bg-neutral-900 text-gray-600 dark:text-accent-foreground min-h-screen flex flex-col items-center justify-between p-6">
 
     <!-- Navbar -->
     <header class="w-full max-w-6xl flex justify-between items-center py-4">
         <div class="flex items-center space-x-3">
             <img src="{{ asset('logo.png') }}" alt="Logo UIN Palu" class="w-10 h-10 rounded-lg shadow-sm">
-            <h1 class="text-xl font-bold">Lab Komputer UIN Palu</h1>
+            <h1 class="text-lg sm:text-xl font-bold">  
+                <span class="hidden sm:inline">Lab Komputer UIN Palu</span>
+                <span class="sm:hidden">Lab UIN</span>
+        </h1>
         </div>
 
         @if (Route::has('login'))

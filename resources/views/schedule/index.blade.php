@@ -26,33 +26,42 @@
 
                     {{-- 🔙 Previous Week --}}
                     <a href="{{ route('schedule.index', array_merge(request()->query(), ['week' => $startOfWeek->copy()->subWeek()->format('Y-m-d')])) }}"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-gray-800 
+                    class="flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-white dark:bg-gray-800 
                             border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 
                             hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
-                        <span>Previous Week</span>
+                          <span class="text-xs sm:text-sm">
+                            <span class="hidden sm:inline">Previous</span>
+                            <span class="sm:hidden">Prev</span>
+                        </span>
                     </a>
 
                     {{-- 📅 Current Week --}}
                     <a href="{{ route('schedule.index') }}"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 
+                    class="flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-gray-100 dark:bg-gray-700 
                             border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 
                             hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
-                        <span>Current Week</span>
+                        <span class="text-xs sm:text-sm">
+                            <span class="hidden sm:inline">Current Week</span>
+                            <span class="sm:hidden">Today</span>
+                        </span>
                     </a>
 
                     {{-- 🔜 Next Week --}}
                     <a href="{{ route('schedule.index', array_merge(request()->query(), ['week' => $startOfWeek->copy()->addWeek()->format('Y-m-d')])) }}"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-800 hover:bg-blue-700 
+                    class="flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2  rounded-lg bg-blue-800 hover:bg-blue-700 
                             text-white transition">
-                        <span>Next Week</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <span class="text-xs sm:text-sm">
+                            <span class="hidden sm:inline">Next</span>
+                            <span class="sm:hidden">Next</span>
+                        </span>
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </a>
